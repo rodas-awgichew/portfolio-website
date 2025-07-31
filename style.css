@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 *{
     margin:0;
     padding:0;
@@ -5,27 +7,38 @@
     font-family: 'Poppins', sans-serif;
 
 }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+.container{
+  background-color: #fefae0;
+}
 #home {
     width:100%;
     height:100vh;
     background-color: #fefae0ad;
    /* background-color: #ffffff;
     color:#2C3E50;*/
-   
+   top:0;
     color:#003049;
 }
 
 .header{
+    background-color: #fefae0ad; 
+    backdrop-filter: blur(6px); 
     display:flex;
-    align-items: center;
+    align-content: center;
     justify-content: space-between;
     /*box-shadow:0px 0px 10px black;*/
     padding:10px;
     margin:0;
     position:sticky;
     top: 0;
+    z-index: 1000;
 
-
+   
 }
 .logo{
     padding-left:40px;
@@ -70,11 +83,12 @@
 }
 
 .hero{
-    padding:70px;
+    padding:50px;
     text-align: center;
     animation: fadeSlide 2s ease-in-out forwards;
     opacity:0;
     transform: rotateX(-30deg);
+    margin-top:20px;
 }
   
 .hero h2{
@@ -118,6 +132,37 @@
   transform: scale(1.02);
 }
 
+.social-icons {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.social-icons a {
+  color: #333; 
+  font-size: 2rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icons a.linkedin:hover {
+  color: #0A66C2; 
+  transform: scale(1.2);
+}
+
+.social-icons a.github:hover {
+  color: #171515; 
+  transform: scale(1.2);
+}
+
+.social-icons a.telegram:hover {
+  color: #0088cc; 
+  transform: scale(1.2);
+}
+
+
+
 .scroll-indicator {
   position: absolute;
   bottom: 20px;
@@ -127,7 +172,7 @@
 }
 
 .arrow {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #2c3e50;
   display: inline-block;
   animation: bounce 1.5s infinite ease-in-out;
@@ -154,16 +199,22 @@
  
   color:#003049;
 }
+#about h1{
+  text-align: center;
+  font-size: 2.2rem;
+}
+
 .about_me{
   display:flex;
+  justify-content:space-around;
   align-content: center;
-  justify-content: center;
-  gap:40px;
+  flex-direction: row;
+  gap:10px;
 }
 .img img{
 
-  height:400px;
-  width:700px;
+  height:350px;
+  padding:20px;
   border-radius: 20px;
   top:0;
   object-fit: contain;
@@ -171,6 +222,101 @@
 .description{
   padding:15px;
   font-size: 1.4rem;
+  justify-content:space-around;
+  align-content: center;
   align-items: center;
+  width:50%;
+  margin:20px;
+  /*box-shadow: 1px 1px 8px #003049;*/
+  border-radius: 30px;
+  transition:transform 1s ease-in-out;
 
+
+}
+.description:hover{
+  transform:scale(1.02);
+  transform: perspective(1.2);
+}
+.description > p,h2{
+  padding-top: 10px;
+
+}
+.cv {
+  font-size:1.2rem;
+  padding:1%;
+  border-radius: 15px;
+  margin-top:30px;
+  background-color: #003049;
+  color:#fefae0;
+  transition: transform 1s ease, color 1s ease-out;
+}
+.cv a{
+  text-decoration: none;
+  color:#fefae0;
+}
+.cv:hover{
+  background-color: #002f49ae;
+  transform:skew(10deg) scale(1.02);
+}
+
+/*services section*/
+#services{
+  width:100%;
+  height:100vh;
+  background-color: #fefae0ad;
+  color:#003049;
+}
+#services h1 {
+  text-align: center;
+  font-size: 2.2rem;
+}
+#services h3 {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-top:30px;
+}
+.all-service {
+  display:flex;
+  flex-wrap:wrap;
+  gap:25px;
+  justify-content:space-evenly;
+  align-items:center;
+  padding:20px;
+  margin-top:20px;
+ 
+
+}
+.service{
+  box-shadow:0px 0px 10px rgba(0, 0, 0, 0.27);
+  border-radius: 20px;
+  font-size: 1.4rem;
+  padding:15px;
+  width:30%;
+  height:250px;
+  text-align: center;
+  transition: transform 0.8s ease, color 1s ease-out;
+
+}
+.service:hover{
+  background-color: #003049;
+  transform:skew(2deg) scale(1.08);
+  color:#fefae0;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+@media (max-width: 768px) {
+  .about_me {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service {
+    width: 80%;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
