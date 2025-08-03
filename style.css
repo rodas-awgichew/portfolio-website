@@ -70,6 +70,8 @@ html {
 .nav a:hover {
   color: #041b28;
   transform: scale(1.06);
+  text-shadow: 0 2px 4px #aaa;
+
   
 }
 
@@ -235,7 +237,7 @@ html {
 }
 .description:hover{
   transform:scale(1.02);
-  transform: perspective(1.2);
+  
 }
 .description > p,h2{
   padding-top: 10px;
@@ -319,4 +321,69 @@ html {
     flex-direction: column;
     gap: 10px;
   }
+  .description p {
+    font-size: 1rem;
+
+  }
+}
+/* portfolio section  */
+#portfolio h1 {
+  text-align: center;
+  font-size: 2.2rem;
+}
+.projects{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  gap: 2.5rem;
+  padding:30px;
+  margin:10px;
+  align-items: center;
+  align-content: center;
+
+}
+@media (max-width: 1024px) {
+  .projects {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .projects{
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+  }
+}.p-image img{
+  width:100%;
+  height:200px;
+  padding:10px;
+  border-radius:30px;
+}
+.project {
+  padding:5px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  border-radius:20px;
+  transition:transform 0.8s ease-out;
+}
+.project:hover{
+  transform:scale(1.04)  translateY(-5px)  ;
+ /* border-top: 4px solid #002f49ae;*/
+
+}
+.info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top:0;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 1rem;
+  opacity: 0;
+  transform: translateY(50%);
+  transition: all 0.1s ease;
+  border-radius:20px;
+}
+
+.project:hover .info {
+  opacity: 1;
+  transform: translateY(0);
 }
