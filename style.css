@@ -326,8 +326,15 @@ html {
 @media (max-width: 768px) {
  
   .description p {
-    font-size: 1rem;
+    font-size: 0.9rem;
 
+  }
+  #about h1{
+  font-size: 2.0rem;
+}
+  .description h2 {
+    font-size: 1.1rem;
+    text-align: center;
   }
   .description {
     width: 90%;
@@ -335,7 +342,7 @@ html {
   }
   .img img{
 
-  height:220px;
+  height:200px;
   padding:20px;
  
 }
@@ -354,7 +361,7 @@ html {
   .img img{
 
   height:280px;
-  padding:20px;
+  padding:10px;
  
 }
 }
@@ -412,21 +419,16 @@ html {
 
   .service {
     width: 80%;
+    height:150px;
+    font-size: 1.1rem;
+    padding: 10px;
   }
-
-  .nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .description p {
-    font-size: 1rem;
-
-  }
-  .description {
-    width: 100%;
-    margin: 0 auto;
+  #services {
+    padding-top: 60px;
   }
 }
+
+
 /* portfolio section  */
 #portfolio h1 {
   text-align: center;
