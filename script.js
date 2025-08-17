@@ -14,4 +14,10 @@ navLinks.forEach(link => {
 });
 
 
+const form = document.querySelector("form");
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  alert("Thanks for your message, Rodas! I'll get back to you soon.");
+  form.reset();
+});
 
