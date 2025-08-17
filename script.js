@@ -21,3 +21,15 @@ form.addEventListener("submit", e => {
   form.reset();
 });
 
+const text = "Web Developer";
+let i = 0;
+const target = document.querySelector(".hero h3 span");
+
+function type() {
+  if (i < text.length) {
+    target.textContent += text.charAt(i);
+    i++;
+    setTimeout(type, 200);
+  }
+}
+type();
